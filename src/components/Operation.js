@@ -1,11 +1,18 @@
-const Operation = ({ value }) => {
-  /** TODO: What happens when a user clicks an Operation, what do we want to pass to our parent? */
+const Operation = ({ value, onClick }) => {
+
+  // When an operation is selected, its value is passed to the handleOperationClick() function in Calculator.js
+
   return (
     <div
+      onClick={() => onClick(value)}
       style={{
         padding: 10,
+        textAlign: "center",
         border: "1px solid black",
-        width: 60,
+        width: 50,
+        padding: 10,
+        backgroundColor: "whitesmoke",
+        borderRadius: 10,
       }}
     >
       {value}
